@@ -4,7 +4,7 @@ function PodcastForm() {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
+    console.log("it's a form!");
   }
 
   return (
@@ -14,7 +14,8 @@ function PodcastForm() {
           type="text"
           name="podcastData"
           placeholder="Upload file or enter a URL"
-          value={formData.podcastData} />
+          // value={formData.podcastData} 
+          />
       </form>
     </div>
   );

@@ -1,9 +1,11 @@
-import './App.css';
+import React from "react";
+import PodcastForm from './PodcastForm';
 
 function App() {
   return (
-    <div>
-      <PodcastForm />
+    <div className="container">
+      <h1>Podcast Translator</h1>
+    <PodcastForm />
     </div>
   );
 }
