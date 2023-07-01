@@ -19,7 +19,7 @@ Allow users to direct the app to a podcast episode, then recieve the same episod
 
 - Javascript and React 
 - APIs for audio transcription and text translation
-- Until I understand this week's material better I can't say whether I would use   NoSQL/Firebase/Firestore
+- Until I understand this week's material better I can't say whether I would use NoSQL/Firebase/Firestore
 
 **If you finish developing the [minimum viable product (MVP)](https://www.learnhowtoprogram.com/react/react-fundamentals/capstone-planning-the-minimum-viable-product) with time to spare, what will you work on next? Describe these features here: Be specific.**
 
