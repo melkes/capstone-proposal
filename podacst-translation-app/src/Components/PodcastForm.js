@@ -1,10 +1,16 @@
 import React from "react";
 
 function PodcastForm() {
+
+  const [podcastData, setPodcastData] = useState(""); // initialize state
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("it's a form!");
+    console.log(podcastData); // log state
+  }
+
+  const handleChange = (event) => {
+    setPodcastData(event.target.value); // update state
   }
 
   return (
@@ -14,7 +20,8 @@ function PodcastForm() {
           type="text"
           name="podcastData"
           placeholder="Upload file or enter a URL"
-          // value={formData.podcastData} 
+          value={formData.podcastData} // set value
+          onChange={handleChange} // update state when changed
           />
       </form>
     </div>
