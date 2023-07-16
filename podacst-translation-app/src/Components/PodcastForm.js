@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function PodcastForm() {
 
@@ -20,7 +20,7 @@ function PodcastForm() {
           type="text"
           name="podcastData"
           placeholder="Upload file or enter a URL"
-          value={formData.podcastData} // set value
+          value={podcastData} // set value
           onChange={handleChange} // update state when changed
           />
       </form>
