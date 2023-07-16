@@ -17,7 +17,7 @@ function PodcastForm() {
     <div>
       <form onSubmit={handleSubmit}>
         <input 
-          type="text"
+          type="file"
           name="podcastData"
           placeholder="Upload file or enter a URL"
           value={podcastData} // set value
