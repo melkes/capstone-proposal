@@ -7,8 +7,26 @@ function PodcastForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(podcastData, language); // log state
+    let formData = new FormData();  // Create a FormData object
+    formData.append("file", podcastData); // Add the file to the request
+    formData.append("language", language); // Add the language to the request
+
+  // Log FormData entries
+  for (let [key, value] of formData.entries()) {
+    console.log(key, value);
   }
+
+    fetch('https://api.openai.com/v1/audio/translations', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+    }
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch((error) => console.error('Error:', error));
+}
 
   const handleChange = (event) => {
     setPodcastData(event.target.files[0]); // update state with file
@@ -25,7 +43,7 @@ function PodcastForm() {
           type="file"
           name="podcastData"
           placeholder="Upload file or enter a URL"
-          value={podcastData} // set value
+          // Removed, for security you cannot set the value for a user's file programmatically like this ---> value={podcastData}  
           onChange={handleChange} // update state when changed
           />
           <p>Choose the language for your source</p>
