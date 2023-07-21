@@ -17,7 +17,7 @@ function PodcastForm() {
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value); // update state with language choice
   }
-
+  
   return (
     <div>
       <form onSubmit={handleSubmit} className="podcast-form"> {/* To do: add styles for this */}
@@ -28,6 +28,7 @@ function PodcastForm() {
           value={podcastData} // set value
           onChange={handleChange} // update state when changed
           />
+          <p>Choose the language for your source</p>
         <select 
           name="language"
           value={language} // set value

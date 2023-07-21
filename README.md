@@ -9,6 +9,7 @@ This project will allow users to point to a podcast episode and have that conten
 1 hour:  Creating initial plan for app components and making diagram
 
 7/15: 1 hour: planning/research
+7/17: 1 hour: API testing
 
 ## Initial Component Diagram
 ![diagram](pod-translator.drawio.png)
