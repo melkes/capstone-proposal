@@ -10,6 +10,7 @@ function PodcastForm() {
     let formData = new FormData();  // Create a FormData object
     formData.append("file", podcastData); // Add the file to the request
     formData.append("language", language); // Add the language to the request
+    formData.append("model", "whisper-1"); // Add the model parameter to the request
 
   // Log FormData entries
   for (let [key, value] of formData.entries()) {
