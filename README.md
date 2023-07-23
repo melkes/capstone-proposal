@@ -10,6 +10,14 @@ This project will allow users to point to a podcast episode and have that conten
 
 7/15: 1 hour: planning/research
 7/17: 1 hour: API testing
+7/22: 1 hour: research to fix bugs
 
 ## Initial Component Diagram
 ![diagram](pod-translator.drawio.png)
+
+## Next Steps
+- **Display transcription results**
+- **Allow file url as input**
+- **Allow downloading transcription**
+- **Show a spinner or something after submit**
+- **Input file validation?**
