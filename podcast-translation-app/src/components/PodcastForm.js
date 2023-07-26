@@ -4,6 +4,7 @@ function PodcastForm() {
 
   const [podcastData, setPodcastData] = useState(""); // initialize state
   const [language, setLanguage] = useState("en"); // initialize state, default to english
+  const [transcription, setTranscription] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,7 +14,7 @@ function PodcastForm() {
     formData.append("model", "whisper-1"); // Add the model parameter to the request
 
   // Log FormData entries
-  for (let [key, value] of formData.entries()) {
+    for (let [key, value] of formData.entries()) {
     console.log(key, value);
   }
 
@@ -24,10 +25,10 @@ function PodcastForm() {
       'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
     }
   })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch((error) => console.error('Error:', error));
-}
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => console.error('Error:', error));
+  }
 
   const handleChange = (event) => {
     setPodcastData(event.target.files[0]); // update state with file
