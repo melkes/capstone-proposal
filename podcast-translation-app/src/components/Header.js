@@ -3,11 +3,11 @@ import './Header.css';
 
 function Header() {
   return (
-    <header>
+    <Header>
       <div className="header-style">
       <h1>Podcast Translator!</h1>
       </div>
-    </header>
+    </Header>
   );
 }
 
