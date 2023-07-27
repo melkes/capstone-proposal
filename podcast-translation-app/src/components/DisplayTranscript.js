@@ -1,18 +1,12 @@
 import React, {useState} from "react";
 
+function DisplayTranscript(props){
+  return (
+    <div className="transcript">
+      <h2>Here is your transcript!</h2>
+      <p>{props.transcript}</p>
+    </div>
+  );
+}
 
-
-
-
-// function AppControl(){
-//   const [transcript, setTranscript] 
-//   = useState("");
-
-//   function handleSetTranscript(transcript){
-//     handleSetTranscript(transcript);
-// }
-
-// return (
-//   {transcript ? <DisplayTranscript transcript={transcript} /> : <PodcastForm handleSetTranscript={handleSetTranscript} /> }
-
-// }
+export default DisplayTranscript;
