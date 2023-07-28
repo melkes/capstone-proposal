@@ -4,6 +4,7 @@ function PodcastForm(props) {
 
   const [podcastData, setPodcastData] = useState(""); // initialize state
   const [language, setLanguage] = useState("en"); // initialize state, default to english
+  console.log('PodcastForm state', { podcastData, language });
 
   const handleSubmit = (event) => {
     event.preventDefault();
