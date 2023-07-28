@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-function PodcastForm() {
+function PodcastForm(props) {
 
   const [podcastData, setPodcastData] = useState(""); // initialize state
   const [language, setLanguage] = useState("en"); // initialize state, default to english
-  const [transcription, setTranscription] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,6 +25,9 @@ function PodcastForm() {
     }
   })
     .then(response => response.json())
+    .then(data => {
+      props.handleSetTranscript(data.text); 
+    })
     .then(data => console.log(data))
     .catch((error) => console.error('Error:', error));
   }

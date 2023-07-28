@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import DisplayTranscript from "./DisplayTranscript";
+import React, { useState } from 'react';
+import DisplayTranscript from './DisplayTranscript';
+import PodcastForm from './PodcastForm';
 
 function AppController() {
   const [transcript, setTranscript] = useState("");
