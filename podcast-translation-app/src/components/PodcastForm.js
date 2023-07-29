@@ -14,16 +14,13 @@ function PodcastForm(props) {
     formData.append("model", "whisper-1"); // Add the model parameter to the request
 
     fetch('https://api.openai.com/v1/audio/translations', {
-    method: 'POST',
-    body: formData,
-    headers: {
-      'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
-    }
-  })
-    .then(response => response.json())
-    .then(data => {
-      props.handleSetTranscript(data.text); 
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+      }
     })
+    .then(response => response.json())
     .then(data => console.log(data))
     .catch((error) => console.error('Error:', error));
   }
