@@ -13,11 +13,6 @@ function PodcastForm(props) {
     formData.append("language", language); // Add the language to the request
     formData.append("model", "whisper-1"); // Add the model parameter to the request
 
-  // Log FormData entries
-  //   for (let [key, value] of formData.entries()) {
-  //   console.log(key, value);
-  // }
-
     fetch('https://api.openai.com/v1/audio/translations', {
     method: 'POST',
     body: formData,
@@ -48,7 +43,6 @@ function PodcastForm(props) {
           type="file"
           name="podcastData"
           placeholder="Upload file or enter a URL"
-          // Removed, for security you cannot set the value for a user's file programmatically like this ---> value={podcastData}  
           onChange={handleChange} // update state when changed
           />
           <p>Choose the language for your source</p>
