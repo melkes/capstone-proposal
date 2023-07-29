@@ -14,9 +14,9 @@ function PodcastForm(props) {
     formData.append("model", "whisper-1"); // Add the model parameter to the request
 
   // Log FormData entries
-    for (let [key, value] of formData.entries()) {
-    console.log(key, value);
-  }
+  //   for (let [key, value] of formData.entries()) {
+  //   console.log(key, value);
+  // }
 
     fetch('https://api.openai.com/v1/audio/translations', {
     method: 'POST',
