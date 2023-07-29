@@ -21,6 +21,15 @@ function PodcastForm(props) {
       }
     })
     .then(response => response.json())
+    // code to display transcript
+    .then(data => {
+      // Extract transcript text
+      const transcript = data.text; 
+      // Pass transcript back to parent 
+      props.handleSetTranscript(transcript);
+
+    })
+
     .then(data => console.log(data))
     .catch((error) => console.error('Error:', error));
   }
