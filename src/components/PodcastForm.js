@@ -29,7 +29,6 @@ function PodcastForm(props) {
       props.handleSetTranscript(transcript);
 
     })
-
     .then(data => console.log(data))
     .catch((error) => console.error('Error:', error));
   }
@@ -51,7 +50,13 @@ function PodcastForm(props) {
           placeholder="Upload file or enter a URL"
           onChange={handleChange} // update state when changed
           />
-          <p>Choose the language for your source</p>
+          <div>
+          <p class="main-text">
+            Need a file to try out? Try <a href="https://traffic.omny.fm/d/clips/60311b15-274a-4e3f-8ba9-ac3000834f37/5fd6f200-265f-42c7-ab4e-ae9a00ce4223/ee83a506-8eb1-47f8-8b4c-ae9a00ce62d2/audio.mp3" download>this</a> trailer for an Italian food podcast, or <a href="https://www.nhk.or.jp/s-media/news/podcast/audio/7c2248ff0f5131f1ce60a6f6451a1651_64k.mp3" download>this</a> Japanese news update.
+          </p>
+          <p class="secondary-text">Currently you'll need to download the file to your computer and then upload it via this form. Support for URLs is coming!</p>
+          </div>
+          <p>Choose the language you'd like to translate into:</p>
         <select 
           name="language"
           value={language} // set value
