@@ -5,12 +5,29 @@ function PodcastForm(props) {
   const [podcastData, setPodcastData] = useState(""); // initialize state
   const [podcastUrl, setPodcastUrl] = useState(""); // initialize state for url input
 
-  console.log('PodcastForm state', { podcastData });
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
-
+ // Check if podcastUrl is not empty, use URL instead of uploaded file
+  if (podcastUrl) {
+    console.log(`Submitting URL: ${podcastUrl}`);
+    fetch('https://api.openai.com/v1/audio/translations', {
+      method: 'POST',
+      body: JSON.stringify({url: podcastUrl, model: 'whisper-1'}), // send URL
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Server response:', data);
+      const transcript = data.text; 
+      props.handleSetTranscript(transcript);
+    })
+    .catch((error) => console.error('Error:', error));
+  } else if (podcastData) {
+    console.log(`Submitting File: ${podcastData.name}`);
     let formData = new FormData();  // Create a FormData object
     formData.append("file", podcastData); // Add the file to the request
     formData.append("model", "whisper-1"); // Add the model parameter to the request
@@ -29,12 +46,14 @@ function PodcastForm(props) {
       const transcript = data.text; 
       // Pass transcript back to parent 
       props.handleSetTranscript(transcript);
-
     })
     .then(data => console.log(data))
     .catch((error) => console.error('Error:', error));
+  } else {
+    console.error('No file or URL provided');
+    alert('Please enter a URL or select a file');
   }
-
+}
   const handleChange = (event) => {
     setPodcastData(event.target.files[0]); // update state with file
   }
@@ -42,6 +61,14 @@ function PodcastForm(props) {
   return (
     <div>
       <form onSubmit={handleSubmit} className="podcast-form"> {/* To do: add styles for this */}
+{/* url input */}
+        <input 
+          type="text"
+          name="podcastUrl"
+          placeholder="Enter a URL"
+          onChange={(event) => setPodcastUrl(event.target.value)} // update state when URL is entered
+        />
+        <p>Or</p>
         <input 
           type="file"
           name="podcastData"
@@ -54,25 +81,6 @@ function PodcastForm(props) {
           </p>
           <p class="secondary-text">Currently you'll need to download the file to your computer and then upload it via this form. Support for URLs is coming!</p>
           </div>
-          {/* <p>Choose the language you'd like to translate into:</p>
-        <select 
-          name="language"
-          value={language} // set value
-          onChange={handleLanguageChange} // update state when changed
-        >
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-          <option value="de">German</option>
-          <option value="it">Italian</option>
-          <option value="pt">Portuguese</option>
-          <option value="zh">Chinese</option>
-          <option value="ja">Japanese</option>
-          <option value="ko">Korean</option>
-          <option value="ar">Arabic</option>
-          <option value="ru">Russian</option>
-          <option value="hi">Hindi</option>
-        </select> */}
         <input type="submit" value="Submit" />
       </form>
     </div>
