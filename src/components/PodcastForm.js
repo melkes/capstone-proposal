@@ -59,6 +59,7 @@ function PodcastForm(props) {
       const transcript = data.text; 
       // Pass transcript back to parent 
       props.handleSetTranscript(transcript);
+      props.setTranscriptReady(true);
     })
     .then(data => console.log(data))
     .catch((error) => console.error('Error:', error));

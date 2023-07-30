@@ -6,6 +6,8 @@ function AppController() {
   const [transcript, setTranscript] = useState("");
   console.log('Rendering AppController');
   console.log('AppController state', transcript);
+  
+  const [transcriptReady, setTranscriptReady] = useState(false);
 
   const handleSetTranscript = (transcript) => {
     setTranscript(transcript);
@@ -13,9 +15,16 @@ function AppController() {
 
   return (
     <div>
-      <PodcastForm handleSetTranscript={handleSetTranscript} />
+      <PodcastForm 
+        handleSetTranscript={handleSetTranscript}
+        setTranscriptReady={setTranscriptReady} 
+        />
     
-      <DisplayTranscript transcript={transcript} />
+      {transcriptReady ? (
+        <DisplayTranscript transcript={transcript} />
+      ) : (
+        <p>Loading...</p>  
+      )}
     </div>
   );
 }
