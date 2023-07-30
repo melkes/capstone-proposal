@@ -23,7 +23,7 @@ function AppController() {
       {transcriptReady ? (
         <DisplayTranscript transcript={transcript} />
       ) : (
-        <p>Loading...</p>  
+        <p>...</p>  
       )}
     </div>
   );

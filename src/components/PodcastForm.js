@@ -85,7 +85,7 @@ function PodcastForm(props) {
       <li><a href="https://www.podcasts-online.org/discover/">Podcasts-Online.org</a>. Scroll to "Listen to podcasts from all over the world" at the bottom of the page.</li>
       <li><a href="https://chartable.com/charts">Chartable</a> has global and country specific top podcast charts</li>
       </ul>
-<hr/>
+
       <form onSubmit={handleSubmit} className="podcast-form"> {/* To do: add styles for this */}
 {/* url input */}
         <input 

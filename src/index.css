@@ -65,7 +65,7 @@ code {
   padding: 10px;
 }
 .podcast-form {
-  background-color: #F0F0F0;
+  background-color: #f9f9f9;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -93,3 +93,21 @@ input[type="file"] {
   transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
+.transcript-text {
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 20px;
+
+  font-size: 18px; /* Bump up font size */
+  line-height: 1.6; /* Add line spacing */
+
+  background-color: #f9f9f9; /* Add background */
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 4px; /* Softened corners */
+
+  /* Styles for screens smaller than 600px */
+  @media (max-width: 600px) {
+    font-size: 16px; 
+    padding: 10px;
+  }
+}
