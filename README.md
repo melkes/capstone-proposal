@@ -16,8 +16,11 @@ This project will allow users to point to a podcast episode and have that conten
 ![diagram](pod-translator.drawio.png)
 
 ## Next Steps
-- **Display transcription results**
-- **Allow file url as input**
+✅ **Display transcription results**
+- **Format the transcript so it's more readable**
+- **Style the site so it looks less boring**
+- **Add ability to paste a url instead of uploading a file**
 - **Allow downloading transcription**
-- **Show a spinner or something after submit**
+- **Show a spinner or progress bar after submit**
 - **Input file validation?**
+- **Explore adding a voice generation feature**
