@@ -6,10 +6,11 @@ This project will allow users to point to a podcast episode and have that conten
 ![diagram](pod-translator.drawio.png)
 
 ## Next Steps
-✅ **Display transcription results**
-⚠️ **Add ability to paste a URL instead of uploading a file**
+- ✅ **Display transcription results**
+- ⚠️ **Add ability to paste a URL instead of uploading a file**
   - Add server-side downloading, sending to form
-- **hide transcript component until it is ready** 
+- ✅ **hide transcript component until it is ready** 
+- **Fix authorization issue in gh-pages deployment**
 - **Format the transcript so it's more readable**
 - **Find a way to resample audio that is over 25mb limit**
 ⚠️ **Style the site so it looks less boring**
