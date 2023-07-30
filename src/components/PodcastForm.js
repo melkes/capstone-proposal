@@ -77,7 +77,7 @@ function PodcastForm(props) {
 
       <p className="main-text">To get started, upload a podcast file from your computer or <s>enter the URL</s>.</p>
       <p>
-      Need a file to try out? Try right-clicking (or long-press if you're on a mobile device) on <a href="https://traffic.omny.fm/d/clips/60311b15-274a-4e3f-8ba9-ac3000834f37/5fd6f200-265f-42c7-ab4e-ae9a00ce4223/ee83a506-8eb1-47f8-8b4c-ae9a00ce62d2/audio.mp3" download>this link</a> to download a trailer for an Italian food podcast, or on <a href="https://www.nhk.or.jp/s-media/news/podcast/audio/7c2248ff0f5131f1ce60a6f6451a1651_64k.mp3" download>this link</a> to get a Japanese news update. After downloading, you can then upload the file via the form below.
+      Need a file to try out? Try right-clicking (or long-press if you're on a mobile device) on <a href="https://traffic.omny.fm/d/clips/60311b15-274a-4e3f-8ba9-ac3000834f37/5fd6f200-265f-42c7-ab4e-ae9a00ce4223/ee83a506-8eb1-47f8-8b4c-ae9a00ce62d2/audio.mp3" download>this link</a> to download a trailer for an Italian history podcast, or on <a href="https://www.nhk.or.jp/s-media/news/podcast/audio/7c2248ff0f5131f1ce60a6f6451a1651_64k.mp3" download>this link</a> to get a Japanese news update. After downloading, you can then upload the file via the form below.
       </p>
       <p className="main-text">Not sure where to find foreign podcasts? Here are a few places to start:</p>
       <ul>
