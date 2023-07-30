@@ -103,7 +103,7 @@ function PodcastForm(props) {
           onChange={handleChange} // update state when changed
           />
           <div>
-          <p className="secondary-text">Currently you'll need to download the file to your computer and then upload it via this form. Support for URLs is coming!</p>
+          <p className="secondary-text">Currently you'll need to download the file {"(<25MB)"} to your computer and then upload it via this form. Support for URLs is coming!</p>
           </div>
         <input type="submit" style={buttonStyle} value="Get transcript" />
       </form>
