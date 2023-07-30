@@ -3,14 +3,23 @@ body {
   color: #333;
   background-color: rgb(236, 238, 234);
   font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
-    
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --pt-green: mediumseagreen;
+  --pt-gray: #0000004d; 
+  --pt-orange: goldenrod;
+  --pt-red: indianred;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+p {
+  padding: 6px 8px;
 }
 
 .container {
@@ -40,4 +49,43 @@ code {
   color: #888;
   font-style: italic;
   margin-top: 5px;
+}
+.podcast-form {
+  background-color: #F0F0F0;
+  padding: 20px;
+  border: 1px solid var(--pt-gray);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+input[type="file"] {
+  display: inline-block;
+  padding: 0.5rem;
+  background: #7777FF;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.button-submit li a {
+  display: inline-block;
+  width: 20rem;
+  height: 3.375rem;
+  line-height: 3.375rem;
+  padding: 0 0.5rem;
+  vertical-align: middle;
+  font-size: 1em;
+  font-weight: 400;
+  border-radius: 8px;
+  direction: var(--site-language-direction);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }

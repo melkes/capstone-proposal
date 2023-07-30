@@ -4,7 +4,20 @@ function PodcastForm(props) {
 
   const [podcastData, setPodcastData] = useState(""); // initialize state
   const [podcastUrl, setPodcastUrl] = useState(""); // initialize state for url input
-
+  const buttonStyle = {
+    display: 'inline-block',
+    width: '20rem',
+    height: '3.375rem',
+    backgroundColor: '#7777FF',
+    color: '#FFF',
+    padding: '0 0.5rem',
+    fontSize: '1em',
+    fontWeight: '600',
+    borderRadius: '0.375rem',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    transition: 'color 0.25s ease, backgroundColor 0.25s ease, borderColor 0.25s ease',
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -90,7 +103,7 @@ function PodcastForm(props) {
           <div>
           <p class="secondary-text">Currently you'll need to download the file to your computer and then upload it via this form. Support for URLs is coming!</p>
           </div>
-        <input type="submit" value="Submit" />
+        <input type="submit" style={buttonStyle} value="Get transcript" />
       </form>
     </div>
   );
