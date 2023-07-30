@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <div className="header-style">
-      <h1>Podcast Translator!</h1>
+      <h1>Podcast Translator! 🎙</h1>
       </div>
     </header>
   );

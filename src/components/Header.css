@@ -1,7 +1,7 @@
 .header-style {
   font-family: 'Rubik', -apple-system, 'Helvetica Neue', sans-serif;;
   color: white;
-  background-color: mediumseagreen; 
+  background-color: hsl(147, 50%, 27%); 
   display: flex;
   justify-content: center; 
   align-items: center; 
