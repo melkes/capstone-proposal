@@ -10,17 +10,6 @@ function PodcastForm(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
- // Check if podcastUrl is not empty, use URL instead of uploaded file
- if (podcastUrl) {
-  fetch('https://api.openai.com/v1/audio/translations', {
-    method: 'POST',
-    body: JSON.stringify({url: podcastUrl, model: 'whisper-1'}), // send URL
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
-    }
-  })
-
 
     let formData = new FormData();  // Create a FormData object
     formData.append("file", podcastData); // Add the file to the request
