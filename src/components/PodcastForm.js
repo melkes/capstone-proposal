@@ -3,14 +3,27 @@ import React, { useState } from "react";
 function PodcastForm(props) {
 
   const [podcastData, setPodcastData] = useState(""); // initialize state
-  const [language, setLanguage] = useState("en"); // initialize state, default to english
-  console.log('PodcastForm state', { podcastData, language });
+  const [podcastUrl, setPodcastUrl] = useState(""); // initialize state for url input
+
+  console.log('PodcastForm state', { podcastData });
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+ // Check if podcastUrl is not empty, use URL instead of uploaded file
+ if (podcastUrl) {
+  fetch('https://api.openai.com/v1/audio/translations', {
+    method: 'POST',
+    body: JSON.stringify({url: podcastUrl, model: 'whisper-1'}), // send URL
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+    }
+  })
+
+
     let formData = new FormData();  // Create a FormData object
     formData.append("file", podcastData); // Add the file to the request
-    formData.append("language", language); // Add the language to the request
     formData.append("model", "whisper-1"); // Add the model parameter to the request
 
     fetch('https://api.openai.com/v1/audio/translations', {
@@ -36,10 +49,6 @@ function PodcastForm(props) {
   const handleChange = (event) => {
     setPodcastData(event.target.files[0]); // update state with file
   }
-
-  const handleLanguageChange = (event) => {
-    setLanguage(event.target.value); // update state with language choice
-  }
   
   return (
     <div>
@@ -56,7 +65,7 @@ function PodcastForm(props) {
           </p>
           <p class="secondary-text">Currently you'll need to download the file to your computer and then upload it via this form. Support for URLs is coming!</p>
           </div>
-          <p>Choose the language you'd like to translate into:</p>
+          {/* <p>Choose the language you'd like to translate into:</p>
         <select 
           name="language"
           value={language} // set value
@@ -74,7 +83,7 @@ function PodcastForm(props) {
           <option value="ar">Arabic</option>
           <option value="ru">Russian</option>
           <option value="hi">Hindi</option>
-        </select>
+        </select> */}
         <input type="submit" value="Submit" />
       </form>
     </div>
