@@ -5,19 +5,26 @@ This project will allow users to point to a podcast episode and have that conten
 **Note: This project is currently a work in progress and does not have a public-facing interface.**
 
 ## Roadmap
-- ✅ **Display transcription results**
-- ⚠️ **Add ability to paste a URL instead of uploading a file**
-  - Add server-side downloading, sending to form
-- ✅ **hide transcript component until it is ready** 
-- **Fix authorization issue in gh-pages deployment**
-- **Format the transcript so it's more readable**
-- **Find a way to resample audio that is over 25mb limit**
-⚠️ **Style the site so it looks less boring**
-- **Allow downloading transcription**
-- **Show a spinner or progress bar after submit**
-- **Input file validation?**
-- **Explore adding a voice generation feature**
-- **Remove console logs and comments from code**
+
+Features to be added:
+
+1. **URL Support**: Ability to paste a URL instead of uploading a file
+
+2. **Improved Transcripts**: Better readability of the generated transcripts.
+
+3. **Download Transcriptions**: Users can download transcriptions as a text file.
+
+4. **Visual Enhancements**: Improvement to the overall look and feel.
+
+5. **Filesize limits**: Create a workaround for API imposed limits.
+
+7. **User Experience**: Add a spinner or progress bar after submitting files for transcription.
+
+8. **Validation**: Implement input file validation.
+
+9. **Voice Generation**: Explore adding a voice generation feature to expand the project's capabilities.
+
+10. **Code Cleanup**: Remove unnecessary console logs and comments from the codebase.
 
 ## License
 
