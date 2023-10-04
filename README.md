@@ -1,11 +1,10 @@
 # Podcast Translator
 
 This project will allow users to point to a podcast episode and have that content transcribed in their language of choice.
+<br/>
+**Note: This project is currently a work in progress and does not have a public-facing interface.**
 
-## Initial Component Diagram
-![diagram](pod-translator.drawio.png)
-
-## Next Steps
+## Roadmap
 - ✅ **Display transcription results**
 - ⚠️ **Add ability to paste a URL instead of uploading a file**
   - Add server-side downloading, sending to form
@@ -20,12 +19,8 @@ This project will allow users to point to a podcast episode and have that conten
 - **Explore adding a voice generation feature**
 - **Remove console logs and comments from code**
 
-### Research & Planning Log
-6/30
-2 hours: Researching translation and transcription APIs
-7/01
-1 hour:  Creating initial plan for app components and making diagram
+## License
 
-7/15: 1 hour: planning/research
-7/17: 1 hour: API testing
-7/22: 1 hour: research to fix bugs
+MIT License
+
+Copyright (c) _2023_ _Mike Wilkes_ 
